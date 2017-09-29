@@ -1,0 +1,27 @@
+* {
+	box-sizing: border-box;
+	font-family: "Source Sans Pro", sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	@include media-max-lg {
+		font-size: 90%;
+	}
+	@include media-max-md {
+		font-size: 85%;
+	}
+	@include media-max-sm {
+	}
+
+	font-size: 100%;
+}
+
+p {
+	line-height: 1.5;
+}
+
+body {
+	background-color: #FFFFFF;
+}

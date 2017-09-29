@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>{{ title }}</title>
+
+    {{#block "fonts"}}
+
+    {{/block}}
+
+    {{#block "styles"}}
+        <link rel="stylesheet" href="/css/vendor.css">
+        <link rel="stylesheet" href="/css/main.css">
+    {{/block}}
+
+</head>
+
+<body>
+
+{{> layouts/_header }}
+
+{{#block "body"}}
+
+{{/block}}
+
+{{#block "footer"}}
+    {{> layouts/_footer }}
+{{/block}}
+
+{{#block "scripts"}}
+    <script>window.__ex__ = {{{ __exposed }}};</script>
+    <script src="/js/core{{ $asset_prefix }}.js"></script>
+    <script async src="/js/main{{ $asset_prefix }}.js"></script>
+{{/block}}
+
+</body>
+</html>
+

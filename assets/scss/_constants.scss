@@ -1,0 +1,8 @@
+$size-sm: 768px;
+$size-md: 992px;
+$size-lg: 1200px;
+$breakpoints: (
+				(sm, $size-sm, 763px),
+				(md, $size-md, 976px),
+				(lg, $size-lg, 1170px)
+);

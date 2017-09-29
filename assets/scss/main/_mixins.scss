@@ -1,0 +1,125 @@
+@import "../vendor/libs/flex";
+@mixin defTransition {
+    transition: all .3s ease;
+}
+@mixin flex-width($size) {
+    flex-basis: $size;
+    max-width: $size;
+}
+@mixin media-min($width) {
+    @media (min-width: $width) {
+        @content;
+    }
+}
+@mixin media-max($width) {
+    @media (max-width: $width) {
+        @content;
+    }
+}
+@mixin media-min-sm {
+    @include media-min($size-sm) {
+        @content;
+    }
+}
+@mixin media-min-sm-max-md {
+    @include media-min($size-sm) {
+        @include media-max($size-md) {
+            @content;
+        }
+    }
+}
+@mixin media-min-sm-max-lg {
+    @include media-min($size-sm) {
+        @include media-max($size-lg) {
+            @content;
+        }
+    }
+}
+@mixin media-min-md {
+    @include media-min($size-md) {
+        @content;
+    }
+}
+@mixin media-min-md-max-lg {
+    @include media-min($size-md) {
+        @include media-max($size-lg) {
+            @content;
+        }
+    }
+}
+@mixin media-min-lg {
+    @include media-min($size-lg) {
+        @content;
+    }
+}
+@mixin media-max-sm {
+    @include media-max($size-sm) {
+        @content;
+    }
+}
+@mixin media-max-md {
+    @include media-max($size-md) {
+        @content;
+    }
+}
+@mixin media-max-lg {
+    @include media-max($size-lg) {
+        @content;
+    }
+}
+@mixin usual-link {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+@mixin flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+@mixin fill-absolutely {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+@mixin padding-lr($value) {
+    padding-left: $value;
+    padding-right: $value;
+}
+@mixin padding-tb($value) {
+    padding-bottom: $value;
+    padding-top: $value;
+}
+@mixin on-hover-focus-active {
+    &:hover,
+    &:focus,
+    &:active {
+        @content;
+    }
+}
+@mixin clearfix {
+    &:after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+}
+//noinspection CssOptimizeSimilarProperties
+@mixin bg-cover {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@mixin no-after {
+    &:after {
+        content: none !important;
+    }
+}
+@mixin no-before {
+    &:before {
+        content: none !important;
+    }
+}
