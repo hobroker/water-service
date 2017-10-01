@@ -4,6 +4,11 @@ function stringEndsWithAny(string, suffixes) {
 	});
 }
 
+function getKey() {
+	return window.location.pathname.split('/model/')[1];
+}
+
 export {
-	stringEndsWithAny
+	stringEndsWithAny,
+	getKey
 };

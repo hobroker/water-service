@@ -6,7 +6,8 @@
     <title>{{ title }}</title>
 
     {{#block "fonts"}}
-
+        <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     {{/block}}
 
     {{#block "styles"}}
@@ -16,17 +17,50 @@
 
 </head>
 
-<body>
+<body class="hold-transition skin-blue sidebar-mini">
 
-{{> layouts/_header }}
+<div class="wrapper">
 
-{{#block "body"}}
+    <header class="main-header">
+        <a href="/" class="logo">
+            <span class="logo-lg">Servicii apa</span>
+        </a>
+    </header>
 
-{{/block}}
+    <aside class="main-sidebar">
+        <section class="sidebar">
+            <ul class="sidebar-menu" data-widget="tree">
+                {{#each links}}
+                    <li>
+                        <a href="{{ this.url }}">
+                            <i class="fa fa-{{ this.icon }}"></i>
+                            <span>{{ this.title }}</span>
+                        </a>
+                    </li>
+                {{/each}}
+            </ul>
+        </section>
+    </aside>
 
-{{#block "footer"}}
-    {{> layouts/_footer }}
-{{/block}}
+    <div class="content-wrapper">
+        <section class="content-header">
+            <h1>
+                {{ title }}
+            </h1>
+        </section>
+
+        <section class="content">
+            {{#block "body"}}
+
+            {{/block}}
+        </section>
+    </div>
+    <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+
+        </div>
+    </footer>
+</div>
 
 {{#block "scripts"}}
     <script>window.__ex__ = {{{ __exposed }}};</script>
@@ -36,4 +70,5 @@
 
 </body>
 </html>
+
 

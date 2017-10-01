@@ -1,0 +1,18 @@
+{{#extend "layouts/main"}}
+
+    {{#content "body" mode="append"}}
+        <div class="box box-primary">
+            <form role="form" data-bitwarden-watching="1">
+                <div class="box-body">
+                    {{#each fields}}
+                        {{> pages/manage/fields/input-text _=this }}
+                    {{/each}}
+                </div>
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    {{/content}}
+
+{{/extend}}

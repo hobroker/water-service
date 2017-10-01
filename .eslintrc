@@ -1,0 +1,32 @@
+{
+  "rules": {
+    "semi": [
+      1,
+      "always"
+    ],
+    "quotes": [
+      1,
+      "double"
+    ],
+    "arrow-parens": [
+      1
+    ],
+    "no-unused-vars": [
+      2,
+      {
+        "vars": "local",
+        "args": "after-used",
+        "ignoreRestSiblings": false
+      }
+    ]
+  },
+  "parserOptions": {
+    "ecmaVersion": 2017,
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "commonjs": true
+  }
+}
